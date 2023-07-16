@@ -1,0 +1,358 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    background-color: #faf5f5;
+
+    font-family: 'Raleway', sans-serif;
+
+}
+header {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: rgb(8, 9, 19);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 4%;
+    width: 20%;
+}
+.brand .SastoHub {
+    font-size: 35px;
+}
+.brand h1 {
+    margin-left: 5%;
+}
+.navbar {
+    position: relative;
+    width: 70%;
+    padding: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchBox {
+    position: relative;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.searchBox input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    padding: 1%;
+    text-indent: 10px;
+    font-size: 18px;
+}
+
+.carousal-container{
+    width: 100%;
+}
+
+img#carousal-image {
+    width: 100%;
+    height: 50vh;
+    border: 4px solid #f1d1d1;
+}
+#product-image {
+    width: 90%;
+    height: 50vh;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+#getImage2 {
+    width: 100%;
+    height: 800px;
+    border: 4px solid #171515;
+}
+#searchIcon {
+    position: relative;
+    left: -30px;
+    font-size: 22px;
+    color: rgb(77, 77, 77);
+    cursor: pointer;
+    z-index: 221;
+}
+.button1 {
+
+    background-color:#f2f2f2; /* Green */
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding:12px;
+    border-radius: 12px;
+    font-size: 16px;
+    opacity: 1;
+    transition: all 0.5s;
+    margin:0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+.button1:hover {opacity: 0.8}
+
+ul {
+    width: 60%;
+    text-align: center;
+}
+ul li {
+    display: inline-block;
+    margin-left: 4%;
+    transition: all 0.5s ease;
+    text-align: center;
+    cursor: pointer;
+    padding: 1%;
+    height: 20px;
+    overflow: hidden;
+}
+ul li:hover {
+    height: 45px;
+}
+ul li #headIcon {
+    display: block;
+    font-size: 22px;
+}
+ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+ul li a:active,
+:focus {
+    text-decoration: underline;
+    font-weight: 700;
+}
+#menuIcon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        display: block;
+        width: 60%;
+        display: none;
+    }
+    .navbar.navactive {
+        display: inline;
+    }
+    .searchBox {
+        position: relative;
+        width: 100%;
+        top: 60px;
+        z-index: 221;
+        left: 5%;
+    }
+    #menuIcon {
+        display: inline;
+        position: fixed;
+        font-size: 25px;
+        margin-left: 88%;
+        z-index: 222;
+        float: right;
+        padding: 1%;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid rgb(221, 221, 221);
+    }
+    .navbar ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(8, 9, 19);
+    }
+    .navbar ul li {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        text-align: left;
+        position: relative;
+        top: 50px;
+        padding: 2%;
+    }
+    ul li #headIcon {
+        display: inline-block;
+        font-size: 33px;
+    }
+    ul li:hover {
+        background: rgb(35, 36, 51);
+    }
+    ul li a {
+        margin-left: 40px;
+        font-family: 600;
+    }
+}
+html{
+    scroll-behaviour:smooth;
+}
+#section1{
+    height:600px;
+    background-color: white;
+}
+#section2{
+    height:600px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+.footer-distributed {
+    position: relative;
+    margin-top:2rem;
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+.footer-distributed .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-right {
+        text-align: center;
+    }
+    .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .footer-distributed .footer-left p.footer-links {
+        line-height: 1.8;
+    }
+}
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.751);
+
+    width: 14%;
+    height: 780px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    font-family: "Helvetica Neue";
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 86%;
+    border-left: none;
+    height: 780px;
+}
+
+.recommended-container{
+    width:85%;
+    margin: auto;
+}
+
+#recommended-products{
+
+}

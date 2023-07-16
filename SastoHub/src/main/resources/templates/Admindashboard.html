@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+
+<!--    head-->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{~/css/admin.css}">
+    <link rel="stylesheet" th:href="@{~/css/popup.css}">
+    <!--    <link rel="stylesheet" href="/static/css/admin.css">-->
+    <title>AdminPanel</title>
+</head>
+
+<body>
+<div th:replace="fragments/AdminNavFrag.html :: adminnav"></div>
+<div class="vessel" >
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>OrderId</th>
+            <th>CustomerName</th>
+            <th>ProductName</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Address</th>
+            <th>MobileNo.</th>
+            <th>Size</th>
+            <th>Email</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="orders:${orderLists}">
+            <td th:text="${orders.orderId}"></td>
+            <td th:text="${orders.getUser().full_name}"></td>
+            <td th:text="${orders.getProduct().productTitle}"></td>
+            <td th:text="${orders.getQuantity()}"></td>
+            <td th:text="${orders.getProduct().productPrice}"></td>
+            <td th:text="${orders.getProduct().productCategory}"></td>
+            <td th:text="${orders.getUser().address}"></td>
+            <td th:text="${orders.getUser().mobileNo}"></td>
+            <td th:text="${orders.getProduct().size}"></td>
+            <td th:text="${orders.getUser().email}"></td>
+            <td>
+                <button class="open-button btn btn-primary " onclick="openForm()">Contact</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>-->
+
+
+
+</body>
+<script th:src="@{~/js/script.js}"></script>
+
+<script>  let myPage = "dash";
+let listGroupItem = Array.from(document.getElementsByClassName("list-view-active"));
+listGroupItem.forEach(i=>{    i.classList.remove("active")  })
+let activeID = document.getElementById(myPage);  activeID.classList.add("active");
+</script>
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
+</html>

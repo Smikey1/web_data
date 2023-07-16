@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-family: "Nunito", sans-serif;
+
+}
+
+/*Navigation From Here  */
+
+header{
+    /* border: solid green 5px; */
+    top: 0;
+    height: 20vh;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.upperpart{
+    /* border: solid red 5px; */
+    /* align-items: center; */
+    height: 10vh;
+    display: flex;
+    background-color: black;
+
+}
+i{
+    /* border: solid red 2px; */
+    color: white;
+    height: 50%;
+    margin-top: 25px;
+    margin-right:10px;
+    margin-left: 10px;
+    width: 2%;
+
+}
+i:hover{
+    transform:scale(1.3);
+    -webkit-transform:scale(1.3);
+    cursor: pointer;
+
+}
+.upperpart input{
+    border: solid black 2px;
+    margin-left: 550px;
+    border-radius: 10px;
+    width: 30%;
+    height: 70%;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.upperpart h1{
+    font-size: 26px;
+    margin-left: 140px;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+}
+.upperpart h1 a{
+    color: white;
+}
+
+
+.lowerpart{
+    /* border: solid #292c2f 3px; */
+    border-radius: 2px;
+    height: 8vh;
+    display: flex;
+    background-color:#eee0;
+    z-index: 1000;
+    /* margin-left: -10px; */
+
+
+}
+.lowerpart a{
+    border-radius: 5px;
+    height: 30px;
+    color: gray;
+    font-weight: 700;
+    margin-left: 140px;
+    margin-top: 13px;
+    font-size: 18px;
+    padding-left: 50px;
+
+}
+.lowerpart a:hover{
+    background-color: rgb(240, 243, 255);
+}
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+    margin-top: 180px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+  
+}
+.faq-page {
+    
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+
+}
+.faq-body{
+    margin: auto;
+    
+   width: 50%; 
+   padding: auto;
+   
+}
+
+
+
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+}
+/* Footer part */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+    font-family: Roboto;
+}
+
+.footertitle {
+    width: 100%;
+    display: inline-block;
+    background: #ccc;
+    height: 5vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 40px;
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin-left: 10px;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: ease .25s;
+    /* border: green solid 5px; */
+}
+
+.footer-distributed p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease .25s;
+    /* border: red solid 5px; */
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.footer-distributed .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+.footer-distributed .footer-links a:before {
+    margin-left: 20px;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+
+.footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    /* background-color: #33383b; */
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    margin-top: -20px;
+    transition:all .25s;
+
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);
+
+}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-right {
+        text-align: center;
+    }
+    .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .footer-distributed .footer-left p.footer-links {
+        line-height: 1.8;
+    }
+}
+
+/* Footer Ends Here */

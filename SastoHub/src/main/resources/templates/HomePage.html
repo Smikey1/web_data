@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./FontAwesome files/fontawesome.css" />
+    <script src="./FontAwesome files/fontawesome.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/style2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Responsive header</title>
+</head>
+<!-- <body>
+  <script>
+    const toggle = () => {
+      document.getElementById("nav").classList.toggle("navactive");
+    };
+  </script> -->
+<header>
+    <div class="brand">
+        <span class="SastoHub"></span>
+        <h1>SastoHub</h1>
+    </div>
+    <span class="fas fa-bars" id="menuIcon" onclick="toggle()"></span>
+    <div class="navbar" id="nav">
+        <div class ="searchBox">
+            <input type="text" placeholder="Search here..." />
+            <span class="fas fa-search" id="searchIcon"></span>
+        </div>
+        <ul>
+            <li>
+                <span class="fas fa-home" id="headIcon"></span>
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <span class="fa fa-user-circle" id="headIcon"></span>
+                <a href="#"> Categories </a>
+            </li>
+            <li>
+                <span class="fas fa-question-circle" id="headIcon"></span>
+                <a href="#"> Sell On SastoHub</a>
+            </li>
+            <li>
+                <span class="fas fa-lock" id="headIcon"></span>
+                <a href="#"> Services </a>
+            </li>
+            <li>
+                <span class="fas fa-sign-out" id="headIcon"></span>
+                <a href="#"> Contact </a>
+            </li>
+            <li>
+                <span class="fas fa-lock" id="headIcon"></span>
+                <a href="#"> About </a>
+            <li>
+                <span class="fas fa-lock" id="headIcon"></span>
+                <a href="#"> Help </a>
+            </li>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<body>
+
+
+
+
+<script type="module">
+    let list = document.getElementById("recommended-products");
+
+    let recomendedProducts = [
+        {
+            name: "MacBook",
+            image: "a.jpg",
+            price: 200,
+            id: "1",
+        },
+        {
+            name: "KTM Bike",
+            image: "a.jpg",
+            price: 300,
+            id: 2,
+        },
+        {
+            name: "MacBook",
+            image: "a.jpg",
+            price: 200,
+            id: "3",
+        },
+        {
+            name: "KTM Bike",
+            image: "a.jpg",
+            price: 300,
+            id: 4,
+        },
+        {
+            name: "MacBook",
+            image: "a.jpg",
+            price: 200,
+            id: "5",
+        },
+        {
+            name: "KTM Bike",
+            image: "a.jpg",
+            price: 300,
+            id: 6,
+        },
+        {
+            name: "MacBook",
+            image: "a.jpg",
+            price: 200,
+            id: "7",
+        },
+        {
+            name: "KTM Bike",
+            image: "a.jpg",
+            price: 300,
+            id: 8,
+        },
+        {
+            name: "MacBook",
+            image: "a.jpg",
+            price: 200,
+            id: "9",
+        },
+        {
+            name: "KTM Bike",
+            image: "a.jpg",
+            price: 300,
+            id: 10,
+        },
+    ];
+
+    let s = "str2";
+    const string = "str1" + s;
+    const stringNew = `string ${string} ${s}`;
+
+    const renderRecommendedList = () =>
+        recomendedProducts.forEach((item, i) => {
+            //research on onclick and html document render
+            const card = `<a href="./addproduct.html?productId=${item.id}">
+                         <div  class="button1" data-index=${i}>
+                              <div class="card-info-wrapper">
+                                <img src="${item.image}" id="product-image" />
+                                  <br />${item.name}
+                                  <br />
+                                  Rs. ${item.price}
+                            </div>
+                        </div>
+                      </a>
+                        `;
+            const element = document.createElement("div");
+            element.innerHTML = card;
+            list.appendChild(element.firstChild);
+        });
+    console.log(window.location);
+    renderRecommendedList();
+</script>
+
+
+
+<div class="main" id="section1">
+    <div class="carousal-container">
+
+        <img
+                src="../static/images/cta.png"
+                id="carousal-image"
+        />
+    </div>
+
+    <div class="recommended-container">
+        <h2>Recommended</h2>
+        <div id="recommended-products" />
+
+        <div class="hmprodclass">
+            <div class="hmproddiv" th:each="product:${products}">
+                <a th:href="@{~/product/}+${product.productId}">
+                    <img class="hmprodimg" th:src="'data:image/png;base64,'+${product.imageBase64}"  alt="image"/>
+                    <!--                <h3 th:text="${product.productTitle}"> </h3>-->
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="main" id="section2"></div>
+<div class="main" id="section2">
+  <img
+    src="/SastoHub/src/main/resources/static/images/a9.jpg"
+    id="getImage2"
+  />
+  <h2>suggested</h2>
+  <button class="button1">
+    <img src="../images/a10.jpg" id="getImage1" /><br />Chanel<br />$20
+  </button>
+  <button class="button1">
+    <img src="../images/a12.jpg" id="getImage1" /><br />Apple Product<br />$300
+  </button>
+  <button class="button1">
+    <img src="../images/a7.jpg" id="getImage1" /><br />shoes<br />$10
+  </button>
+  <button class="button1">
+    <img src="../images/a11.jpg" id="getImage1" /><br />Rolex<br />$50
+  </button>
+  <button class="button1">
+    <img src="../images/a13.jpg" id="getImage1" /><br />Apple Watch<br />$50
+  </button>
+</div>
+<div class="main" id="section2"><h2></h2></div>
+
+</body> -->
+
+</body>
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-right">
+
+        <a href="" class="facebook-class"> <i class="fa-brands fa-facebook"></i>
+
+        </a>
+
+        <a href="" class="twitter-class"><i class="fa-brands fa-twitter"></i>
+
+        </a>
+        <a href="" class="instagram-class"><i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+        <a href="" class="linkedin-class"><i class="fa-brands fa-linkedin"></i>
+
+        </a>
+    </div>
+
+    <div class="footer-left">
+
+        <p class="footer-links">
+            <a class="link-1" href="#">Home</a>
+
+            <a href="#">Blog</a>
+
+
+
+            <a href="#">About Us</a>
+
+            <a href="#">FAQs</a>
+
+            <a href="#">Contact Us</a>
+        </p>
+
+        <p>SastoHub &copy; 2022</p>
+    </div>
+
+</footer>
+
+
+
+</html>

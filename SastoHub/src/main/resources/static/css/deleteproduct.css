@@ -1,0 +1,122 @@
+* {
+    font-size: 14px;
+
+}
+
+.container{
+    /* background-color: white; */
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: #d0d0b5;*/
+    justify-content: space-around;
+    padding: 3%;
+    width: 70%;
+    border-radius: 5px;
+    margin-left: 20%;
+    /* border: green solid 2px;  */
+}
+h1{
+    margin-left: -700px;
+}
+.inside_container{
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5%;
+    border-radius: 0%;
+
+}
+
+.profile-pic{
+    margin: -340px -100px 9px;
+    height: 300px;
+    width: 300px;
+}
+
+.profile-pic img{
+    border-radius: 60%;
+    box-shadow: 10px 10px 10px 10px #c1c1c1;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
+
+.left-side{
+    width: 40%;
+    /* border: solid red 2px; */
+    margin-left: -80px;
+    margin-top: -40px;
+}
+.product{
+    width: 100%;
+    /* border: dotted red 2px; */
+}
+.product input, select{
+    width: 100%;
+    border: 1px solid black;
+    height: 100%;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 25px;
+
+}
+.description{
+    margin-top: 25px;
+}
+
+textarea{
+    border-radius: 5px;
+    padding: 2%;
+    resize: none;
+}
+
+
+.footer{
+    /*display: flex;*/
+}
+
+
+button{
+    margin: 22px 27px 30px 48px;
+    flex: 1;
+    border: solid 2px black;
+    cursor: pointer;
+    border-radius: 20px;
+}
+@media screen and (max-width: 920px) {
+    .container{
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*background-color: #d0d0b5;*/
+        justify-content: space-around;
+        padding: 3%;
+        width: 100%;
+        border-radius: 5px;
+        margin-left: auto;
+
+    }
+    img{
+        display:none;
+    }
+    .inside_container{
+        width:80%;
+        margin:auto;
+    }
+    .footer{
+        display: flex;
+        width:40%;
+    }
+
+    .left-side{
+        margin:auto;
+        width:40%;
+
+    }}
+

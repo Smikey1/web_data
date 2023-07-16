@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{~/css/update.css}">
+<!--    <link rel="stylesheet" href="/static/css/update.css">-->
+</head>
+
+<header>
+    <div class="upperpart">
+        <h1>
+            SastoHub
+        </h1>
+
+        <input type="text" placeholder="Search">
+        <!-- <i class="fa-solid fa-magnifying-glass "></i>   -->
+
+        <i class="fa-solid fa-cart-shopping "></i>
+        <i class="fa-solid fa-user "></i>
+
+
+    </div>
+    <div class="lowerpart">
+        <a href="#home">Home</a>
+        <a href="#home">Categories</a>
+
+        <a href="#about">Services</a>
+        <a href="#futsal">Contact</a>
+
+
+        <a href="#blogs">About</a>
+        <a href="#contact-us">Help</a>
+
+    </div>
+</header>
+<body>
+
+<form th:method="post" th:action="@{/user/save}" th:object="${users}" >
+
+    <div class="rightpart">
+        <h2>
+            My Details
+        </h2>
+        <h3>
+            Personal Information
+        </h3>
+
+        <input class="iddds" hidden type="text" th:field="*{id}" th:value="${currentUser.getId()}">
+
+        <div class="namebox">
+            Name<br> <input class="info" type="text" th:field="*{fullname}" th:value="${currentUser.getFull_name()}">
+        </div>
+        <div class="number">
+            Phone Number<br>
+            <input class="info" type ="text" th:field="*{mobile_no}" th:value="${currentUser.getMobileNo()}">
+
+        </div>
+
+        <div class="address">
+            Address<br>
+            <input class="info" type="text" th:field="*{address}" th:value="${currentUser.getAddress()}">
+
+        </div>
+
+        <div class="email">
+            Email Address<br>
+            <input class="info" type="email" th:field="*{email}" th:value="${currentUser.getEmail()}">
+        </div>
+        <div class="pw">
+            Password<br>
+            <input class="info" type="password" th:field="*{password}" th:value="${currentUser.getPassword()}">
+        </div>
+        <div class="cpw">
+            Confirm Password<br>
+            <input class="info" type="password">
+        </div>
+
+
+        <div class="savebuttton">
+        <a class="delete" th:href="@{~/user/edit/}+${currentUser.id}">
+            <button type="submit">SaveChanges</button>
+        </a>
+        </div>
+
+
+        <div class="deletebuttton">
+            <a class="delete " th:href="@{~/user/delete/}+${currentUser.id}">
+                <button type="button" >DeleteAccount</button>
+            </a>
+        </div>
+    </div>
+</form>
+</body>
+
+</html>

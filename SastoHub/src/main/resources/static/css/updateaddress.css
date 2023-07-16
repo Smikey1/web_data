@@ -1,0 +1,185 @@
+*{
+    background-color: #F4F6F8;
+    
+    
+}
+.whole h1{
+    background-color: #F4F6F8;
+    margin-left: 1%;
+}
+
+.right h1{
+    background-color: white;
+    display: inline-block;
+    margin-left: 5%;
+}
+.right h2{
+ 
+    margin-left: 5%;
+}
+.bodies{
+        
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    flex-wrap: wrap;
+    
+    
+}
+.left{
+    width: 20%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+.left a{
+    margin-top: 5px;
+    padding: 5px;
+    text-decoration: none;
+   
+    border-radius: 15px;
+    background-color: #F4F6F8;
+    color: black;
+    
+}
+.left a:hover{
+    background-color: #CADCEE;
+}
+.right{
+    width: 70%;
+    height: 80vh;
+    
+    
+    background-color: white;
+    border-radius: 20px;
+    
+    
+}
+input{
+    border-radius: 10px;
+    width: 60%;
+    height: 25px;
+    background-color: #EBEFF3;
+    
+}
+.input_info{
+    display: flex;
+    
+    background-color: #f4f4f4;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    padding-bottom: 20px;
+ 
+}
+.element{
+    width: 50%;
+    margin-top: 10px;
+    
+   
+    background-color: #f4f4f4;
+}
+
+
+/* .right button{
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-left: 50px;
+    background-color: gray;
+    cursor: pointer;
+    
+
+    margin-bottom: 40px;
+    
+
+} */
+
+.right button{
+    margin-left: 60%;
+    background: coral;
+    color:#fff;
+    padding: 1em 2em;
+    border: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal-header h2, .modal-footer h3{
+    margin: 0;
+    background: coral;
+}
+
+.modal-header{
+    background: coral;
+    padding: 15px;
+    color: white;
+}
+
+.modal-body{
+    padding: 10px 20px;
+}
+
+/* .modal-body input{
+    border-radius: 10px;
+    width: 40%;
+    background-color: #eeeee4;
+} */
+
+.modal-footer{
+    background: coral;
+    padding: 10px;
+    color: white;
+}
+
+.modal-footer button{
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 70%;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.closeBtn{
+    color: white;
+    background: coral;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}

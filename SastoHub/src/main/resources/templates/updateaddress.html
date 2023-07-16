@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Address</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/static/css/updateaddress.css">
+    </head>
+
+<body>
+    <section id="whole">
+        <h1>My Account</h1>
+        <div class="bodies">
+            <div class="left">
+                <a href=""><i class="fa-solid fa-user"></i> My Details</a>
+                <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i> My Address</a>
+                <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i> My Orders</a>
+                <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i> My Reviews</a>
+
+
+            </div>
+            <div class="right">
+                <!-- <h1>My Details</h1>
+                <button class="btn">Add New Address</button>
+                <a href=""><i class="fa-solid fa-user"></i>Add new address</a>
+                <button type="button" class="btn btn-secondary btn-align">Login</button> -->
+                <button id="modalBtn" class="button">Add New Address</button>
+                <div id="simpleModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="closeBtn">&times;</span>
+                            <h2>Add New Address</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input_info">
+                                <div class="element">
+                                Full Name <br> 
+                                <input type="text">
+                            </div>
+                            <div class="element">
+                                City <br>
+                                <input type="text">
+                            </div>
+                            <div class="element">
+                                Phone No <br>
+                                <input type="text">
+                            </div>
+                            <div class="element">
+                                Address <br>
+                                <input type="text">
+                            </div>
+                            <div class="element">
+                                Province <br>
+                                <input type="text">
+                            </div>
+                            <div class="element">
+                                Select label <br>
+                                <input type="text">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit">Save Changes</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+
+<script src="/static/js/updateaddress.js"></script>
+</body>
+
+</html>

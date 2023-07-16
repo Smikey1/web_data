@@ -1,0 +1,60 @@
+body{
+  background-color: #eeeee4;
+}
+
+/*section{*/
+/*  !* border: solid 2px green; *!*/
+/*  height: 90vh;*/
+/*  display: flex;*/
+/*  background-color: #eeeee4;*/
+
+/*}*/
+.middle{
+  /* border: solid 10px purple; */
+  background-color: white;
+  border-radius: 20px;
+  width: 80%;
+  height: 90%;
+  margin-top: -70px;
+  margin-left: 500px;
+  justify-content: center;
+  /* border: solid green 5px; */
+
+
+}
+.email{
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: 250px;
+
+}
+.description{
+  margin-left: 250px;
+  margin-top: 20px;
+
+}
+.email input{
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  margin-top: 20px;
+
+}
+.description textarea{
+  border-radius: 10px;
+  width: 300px;
+  resize: none;
+
+}
+a{
+  margin-left: 350px;
+  margin-top: 50px;
+}
+
+  
+  
+  
+  
+  
+  
+  

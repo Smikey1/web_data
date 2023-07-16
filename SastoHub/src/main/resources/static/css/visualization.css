@@ -1,0 +1,29 @@
+.analytics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: solid green 5px;
+    /*margin-top: -250px;*/
+}
+
+#piechart{
+    flex: 1;
+    border: #000718 solid 4px;
+    height: 10px;
+    width: 10px;
+}
+
+#bargraph{
+    height: 10px;
+    width: 10px;
+    flex: 1;
+    border: #000718 solid 4px;
+}
+
+#linegraph{
+
+    flex:1;
+    border: #000718 solid 4px;
+
+}

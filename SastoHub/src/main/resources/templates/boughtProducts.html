@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProductList</title>
+    <link rel="stylesheet" th:href="@{~/css/myproduct.css}">
+</head>
+<body>
+<h1>My Products</h1>
+<div class="autodiv" th:each="products:${product}">
+    <div class="box">
+        <img class="img" th:src="'data:image/png;base64,'+${products.imageBase64}" />
+        <div class="content">
+            <h2 th:text="${products.productTitle}"></h2>
+            <small>Brand New</small>
+            <h3 th:text="${products.productCategory}"> </h3>
+            <h3 th:text="${products.brandName}"> </h3>
+            <h3 th:text="${products.productDescription}"> </h3>
+            <h3 th:text="${products.productPrice}"> </h3>
+            <h3 th:text="${products.Size}"> </h3>
+            <button class="button-1" role="button">Edit</button>
+            <button class="button-2" role="button" >Delete</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

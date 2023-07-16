@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{~/css/mainhomepage.css}">
+
+
+</head>
+<header>
+    <div class="upperpart">
+        <h1>
+           <a th:href="@{~/home/homepage}">Sasto Hub</a>
+        </h1>
+
+        <input type="text" placeholder="Search">
+
+        <i class="fa-solid fa-cart-shopping "></i>
+
+        <div>
+        <a th:href="@{~/user/profile/}+${userdata.id}">
+        <i class="fa-solid fa-user "></i>
+        </a>
+            <span th:text="${userdata.getFull_name()}" style="color: white;margin-left: 5px;" ></span>
+        </div>
+
+
+    </div>
+    <div class="lowerpart">
+        <a th:href="@{~/home/homepage}">Home</a>
+        <a th:href="@{~/home/homepage}">Categories</a>
+
+        <a th:href="@{~/home/homepage}">Services</a>
+        <a th:href="@{~/pay/payment}">Contact</a>
+
+
+        <a th:href="@{~/user/about}">About</a>
+
+
+    </div>
+</header>
+
+<body>
+<div class="container">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+<!--            <div class="swiper-slide"><img th:src="@{~/images/f1.jpg}" alt=""></div>-->
+            <div class="swiper-slide"><img th:src="@{~/images/f22.jpg}" alt=""></div>
+            <div class="swiper-slide"><img th:src="@{~/images/f33.jpg}" alt=""></div>
+            <div class="swiper-slide"><img th:src="@{~/images/f44.jpg}" alt=""></div>
+
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+
+
+<!--        <div class="swiper-button-prev"></div>-->
+<!--        <div class="swiper-button-next"></div>-->
+
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay:{
+            delay: 10000,
+            disableOnInteraction: false
+        },
+        loop: true,
+
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+
+    });
+</script>
+
+<div class="maindiv">
+<!--    <h1 id="h1">Recently Added Product</h1>-->
+    <div class="hmprodclass">
+        <div class="hmproddiv" th:each="product:${product}">
+            <a th:href="@{~/product/}+${product.productId}">
+                <img class="hmprodimg" th:src="'data:image/png;base64,'+${product.imageBase64}"  alt="image"/>
+<!--                <h3 th:text="${product.productTitle}"> </h3>-->
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--<div class="gap">-->
+
+</div>
+
+
+<div class="footertitle">SastoHub</div>
+
+<footer class="footer-distributed">
+
+    <div class="footer-right">
+
+        <a href="" class="facebook-class"> <i class="fa-brands fa-facebook"></i></a>
+        <a href="" class="twitter-class"><i class="fa-brands fa-twitter"></i></a>
+        <a href="" class="instagram-class"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" class="linkedin-class"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+
+    <div class="footer-left">
+
+        <p class="footer-links">
+            <a class="link-1" th:href="@{~/home/homepage}">Home</a>
+
+            <a th:href="@{~/user/about}">About Us</a>
+
+            <a th:href="@{~/user/faq}">FAQs</a>
+
+            <a th:href="@{~/pay/payment}">Contact Us</a>
+        </p>
+
+        <p>sastohub@gmail.com Ktm, Nepal<br>
+        85475967841, 3210154789, 0124587895</p>
+        <p>SastoHub &copy; 2022</p>
+    </div>
+
+</footer>
+</body>
+</html>
+

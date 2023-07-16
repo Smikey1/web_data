@@ -1,0 +1,125 @@
+
+
+<div th:fragment="adminnav">
+    <section id="sidebar">
+
+        <a href="#" class="logo">
+
+            <i class='bx bxs-smile'></i>
+
+            <span class="text">AdminPanel</span>
+
+        </a>
+
+        <ul class="side-menu top">
+
+            <li class="list-view-active active" id="dash">
+
+                <a  th:href="@{~/admin/Admin-dashboard}">
+
+                    <i class='bx bxs-dashboard' ></i>
+
+                    <span class="text">Dashboard</span>
+                </a>
+
+            </li>
+
+            <li class="list-view-active" id="store" >
+
+                <a  th:href="@{~/product/addProduct}">
+
+                    <i class='bx bxs-shopping-bag-alt' ></i>
+
+                    <span class="text">My Store</span>
+
+                </a>
+
+            </li>
+            <li class="list-view-active" id="pro" >
+
+                <a  th:href="@{~/product/list}">
+
+                    <i class='bx bxs-shopping-bag-alt' ></i>
+
+                    <span class="text">My Products</span>
+
+                </a>
+
+            </li>
+
+            <li class="list-view-active" id="stat" >
+                <a th:href="@{~/admin/contact}">
+
+                    <i class='bx bxs-chart' ></i>
+
+                    <span class="text">Analytics</span>
+
+                </a>
+
+            </li>
+
+<!--            <li class="list-view-active" >-->
+
+<!--                <a id="sales" href="#">-->
+
+<!--                    <i class='bx bxs-chart' ></i>-->
+
+<!--                    <span class="text">Sales</span>-->
+
+<!--                </a>-->
+
+<!--            </li>-->
+
+        </ul>
+
+        <ul class="side-menu">
+
+            <li>
+
+                <a href="#" class="logout">
+
+                    <i class='bx bxs-log-out-circle' ></i>
+
+                    <span class="text">Logout</span>
+
+                </a>
+
+            </li>
+        </ul>
+
+    </section>
+
+
+
+
+
+    <section id="content">
+
+        <nav>
+
+            <i class='bx bx-menu' ></i>
+
+            <a href="#" class="nav-link">Categories</a>
+
+            <form action="#">
+
+                <div class="form-input">
+
+                    <input type="search" placeholder="Search...">
+
+                    <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+
+                </div>
+
+            </form>
+
+            <a href="#" class="profile">
+
+                <img class="image" th:src="@{/images/profile.jpg}" alt="image">
+
+            </a>
+
+        </nav>
+    </section>
+
+</div>

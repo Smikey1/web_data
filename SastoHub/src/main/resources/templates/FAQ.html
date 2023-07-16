@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ PAGE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{~/css/FAQ.css}">
+    <link rel="stylesheet" href="/static/css/FAQ.css">
+
+</head>
+<header>
+    <div class="upperpart">
+        <h1>
+            <a th:href="@{~/home/homepage}">Sasto Hub</a>
+        </h1>
+
+        <input type="text" placeholder="Search">
+
+        <i class="fa-solid fa-cart-shopping "></i>
+        <a th:href="@{~/user/profile/{id}}"><i class="fa-solid fa-user "></i></a>
+
+
+    </div>
+    <div class="lowerpart">
+        <a th:href="@{~/home/homepage}">Home</a>
+        <a th:href="@{~/home/homepage}">Categories</a>
+
+        <a th:href="@{~/home/homepage}">Services</a>
+        <a th:href="@{~/pay/payment}">Contact</a>
+
+
+        <a th:href="@{~/user/about}">About</a>
+
+
+    </div>
+</header>
+
+<body>
+    <main>
+
+        <h1 class="faq-heading">FAQ'S </h1>
+        <section class="faq-container">
+            <div class="faq-one">
+
+                
+                <h1 class="faq-page">What is motive behind SastoHub?</h1>
+
+                
+                <div class="faq-body">
+                    <p> The Main motive is to discard old traditional approach of shopping. SastoHub focuses on
+                        Quality product with use of new technology .
+
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-two">
+
+                
+                <h1 class="faq-page">Is sastohub safe to use?</h1>
+
+                
+
+                <div class="faq-body">
+                    <p>
+                        Only admin panel has access to view, change and edit data so data are safely kept in database.
+                        with use of high backend technology and database technology SastoHub ensures to provide safety to users.
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+
+            <div class="faq-three">
+
+                
+<h1 class="faq-page">How an idea of SastoHub formed?</h1>
+
+                
+                <div class="faq-body">
+                    <p>
+                        User were not convenient to use ecommerce before sastohub introduced themself. There were various bugs and 
+                        data safety were not provided by other ecommerce website. In order to resolve those problems
+                        SastoHub was born.
+                    </p>
+                </div>
+            </div>
+
+            <h1 class="faq-page">How an idea of SastoHub formed?</h1>
+
+
+            <div class="faq-body">
+                <p>
+                    User were not convenient to use ecommerce before sastohub introduced themself. There were various bugs and
+                    data safety were not provided by other ecommerce website. In order to resolve those problems
+                    SastoHub was born.
+                </p>
+            </div>
+            </div>
+            <h1 class="faq-page">How an idea of SastoHub formed?</h1>
+
+
+            <div class="faq-body">
+                <p>
+                    User were not convenient to use ecommerce before sastohub introduced themself. There were various bugs and
+                    data safety were not provided by other ecommerce website. In order to resolve those problems
+                    SastoHub was born.
+                </p>
+            </div>
+            </div>
+
+        </section>
+    </main>
+    <script th:src="@{~/js/FAQ.js}"></script>
+    <div class="footertitle">SastoHub</div>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="" class="facebook-class"> <i class="fa-brands fa-facebook"></i></a>
+            <a href="" class="twitter-class"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" class="instagram-class"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" class="linkedin-class"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a class="link-1" th:href="@{~/home/homepage}">Home</a>
+
+                <a th:href="@{~/user/about}">About Us</a>
+
+                <a th:href="@{~/pay/payment}">FAQs</a>
+
+                <a th:href="@{~/pay/payment}">Contact Us</a>
+            </p>
+
+            <p>sastohub@gmail.com Ktm, Nepal<br>
+                85475967841, 3210154789, 0124587895</p>
+            <p>SastoHub &copy; 2022</p>
+        </div>
+
+    </footer>
+</body>
+
+
+</html>
